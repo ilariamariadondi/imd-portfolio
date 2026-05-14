@@ -21,7 +21,7 @@ a{color:inherit;text-decoration:none;}
 
 /* HEADER */
 header{padding:26px var(--pad) 22px;display:flex;justify-content:space-between;align-items:center;border-bottom:1.5px solid var(--line);gap:20px;}
-.logo-img{height:90px;width:auto;max-width:300px;object-fit:contain;object-position:left center;display:block;}
+.logo-img{height:90px;width:auto;max-width:420px;object-fit:contain;object-position:left center;display:block;}
 .logo-wrap{display:flex;flex-direction:column;gap:8px;}
 .hdr-email{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;white-space:nowrap;}
 
@@ -53,10 +53,12 @@ header{padding:26px var(--pad) 22px;display:flex;justify-content:space-between;a
 /* WHY ME */
 .why{padding:44px var(--pad) 52px;border-bottom:1px solid var(--line);}
 .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px;}
-.why-card{background:#fff;padding:20px 18px 22px;border-top:2.5px solid var(--rust);}
+.why-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--rust);font-weight:500;margin-bottom:6px;}
+.why-icon{height:36px;margin-top:14px;display:flex;align-items:center;}
+.why-icon img{height:100%;width:auto;max-width:110px;object-fit:contain;object-position:left center;display:block;}
 
-.why-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;margin-bottom:4px;line-height:1.2;}
-.why-since{font-size:11px;color:var(--rust);letter-spacing:.3px;margin-bottom:7px;}
+.why-card{background:#fff;padding:20px 18px 22px;border-top:2.5px solid var(--rust);}font-weight:500;margin-bottom:4px;line-height:1.2;}
+.why-name{font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:.3px;margin-bottom:7px;}
 .why-desc{font-size:13px;color:var(--gray);line-height:1.5;}
 
 /* NEWSLETTER */
@@ -159,7 +161,7 @@ footer{padding:28px var(--pad);border-top:1.5px solid var(--line);display:flex;j
     <h1 class="hero-h1">Lavoro sulle <em>parole</em> che raccontano le persone - e sui sistemi che oggi le producono.</h1>
     <p class="hero-bio">Giornalista, autrice e consulente. Da oltre dieci anni mi occupo di linguaggi, narrazioni, diritti e parità di genere per testate, aziende, fondazioni e istituzioni. Oggi affianco a questo lavoro la formazione e la consulenza sull'integrazione dell'AI nei processi di comunicazione, con un'attenzione costante agli impatti sociali e reputazionali.</p>
   </div>
-  <img src="foto.jpg" alt="Ilaria Maria Dondi" class="hero-photo">
+  <img src="foto.jpeg" alt="Ilaria Maria Dondi" class="hero-photo">
 </section>
 
 <!-- SERVICES -->
@@ -197,25 +199,29 @@ footer{padding:28px var(--pad);border-top:1.5px solid var(--line);display:flex;j
     <h2 class="sec-title">Perché lavorare con me</h2>
   </div>
   <div class="why-grid">
-    <a href="https://espresso.repubblica.it" class="why-card">
-      <div class="why-name">Firma L'Espresso</div>
-      <div class="why-since">Dal 2018</div>
-      <div class="why-desc">Inchieste su diritti, parità e politiche pubbliche</div>
-    </a>
-    <a href="" class="why-card">
-      <div class="why-name">TEDx Speaker</div>
-      <div class="why-since">2025</div>
-      <div class="why-desc">Diritti riproduttivi e linguaggi inclusivi</div>
-    </a>
-    <a href="https://www.linkedin.com/in/ilariamariadondi/" class="why-card">
-      <div class="why-name">LinkedIn Top Voice</div>
-      <div class="why-since">Parità di genere dal 2022</div>
-      <div class="why-desc">Riconoscimento per il contributo pubblico al tema</div>
-    </a>
     <div class="why-card">
+      <div class="why-label">Collaboro con</div>
+      <div class="why-name">L'Espresso</div>
+      <div class="why-desc">Inchieste su diritti, parità e politiche pubbliche</div>
+      <div class="why-icon"><img src="logo-espresso.png" alt="L'Espresso"></div>
+    </div>
+    <div class="why-card">
+      <div class="why-label">Nel 2025 sono stata</div>
+      <div class="why-name">TEDx Speaker</div>
+      <div class="why-desc">Diritti riproduttivi e linguaggi inclusivi</div>
+      <div class="why-icon"><img src="logo-tedx.png" alt="TEDx"></div>
+    </div>
+    <div class="why-card">
+      <div class="why-label">Dal 2022 sono</div>
+      <div class="why-name">LinkedIn Top Voice</div>
+      <div class="why-desc">Per la parità di genere</div>
+      <div class="why-icon"><img src="logo-topvoice.png" alt="LinkedIn Top Voice"></div>
+    </div>
+    <div class="why-card">
+      <div class="why-label">Ho diretto per +10 anni</div>
       <div class="why-name">Roba da Donne</div>
-      <div class="why-since">Ex direttrice responsabile</div>
-      <div class="why-desc">Community 1M+ utenti - oltre 10 anni di direzione</div>
+      <div class="why-desc">Community 1M+ utenti</div>
+      <div class="why-icon"><img src="logo-robadadonne.png" alt="Roba da Donne"></div>
     </div>
   </div>
 </section>
