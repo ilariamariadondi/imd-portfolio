@@ -173,18 +173,25 @@ header{
 
 /* FOR WHOM */
 .for-whom{
-  padding:26px var(--pad);
+  padding:var(--sec-top) var(--pad) var(--sec-bot);
   border-bottom:1px solid var(--line);
-  background:rgba(255,255,255,.28);
 }
-.for-whom p{
+.for-whom-box{
+  padding:28px;
+  background:rgba(255,255,255,.44);
+  border:1px solid var(--line);
+  text-align:center;
+}
+.for-whom-title{
   font-family:'Cormorant Garamond',serif;
-  font-size:25px;
-  line-height:1.35;
+  font-size:27px;
+  font-weight:500;
+  line-height:1.22;
   color:#2d2925;
-  max-width:920px;
+  max-width:880px;
+  margin:0 auto 18px;
 }
-.for-whom em{font-style:italic;color:var(--rust);}
+.for-whom-title em{font-style:italic;color:var(--rust);}
 
 /* WHY ME */
 .why{padding:var(--sec-top) var(--pad) var(--sec-bot);border-bottom:1px solid var(--line);}
@@ -344,7 +351,8 @@ footer{padding:24px var(--pad);display:flex;justify-content:space-between;align-
   .svc-grid{grid-template-columns:1fr;gap:30px;}
   .col-title{font-size:21px;}
   .svc-list li{font-size:16px;line-height:1.45;}
-  .for-whom p{font-size:23px;line-height:1.32;}
+  .for-whom-box{padding:24px;}
+  .for-whom-title{font-size:25px;line-height:1.24;}
   .why-grid{grid-template-columns:1fr;gap:14px;}
   .why-card{min-height:auto;padding:18px;}
   .why-label{min-height:0;font-size:10px;}
@@ -443,7 +451,12 @@ footer{padding:24px var(--pad);display:flex;justify-content:space-between;align-
 
 <!-- FOR WHOM -->
 <section class="for-whom">
-  <p>Lavoro con aziende, redazioni, fondazioni, istituzioni, scuole e professioniste/i che vogliono comunicare meglio, usare l'AI con criterio e ridurre rischi <em>linguistici, discriminatori e reputazionali</em>.</p>
+  <div class="for-whom-box">
+    <div class="for-whom-title">Lavoro con aziende, redazioni, fondazioni, istituzioni, scuole e professioniste/i che vogliono comunicare meglio, usare l'AI con criterio e ridurre rischi <em>linguistici, discriminatori e reputazionali</em>.</div>
+    <div class="btn-row center">
+      <a href="mailto:ilariamariadondi@gmail.com" class="btn-primary">Costruiamo il percorso giusto</a>
+    </div>
+  </div>
 </section>
 
 <!-- WHY ME -->
