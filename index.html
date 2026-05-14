@@ -3,133 +3,385 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ilaria Maria Dondi</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Ilaria Maria Dondi | Scrittura, comunicazione, Ethical AI</title>
+<meta name="description" content="Ilaria Maria Dondi, giornalista, autrice e consulente. Scrittura, comunicazione, Ethical AI, parità di genere e linguaggi inclusivi.">
+<meta property="og:title" content="Ilaria Maria Dondi">
+<meta property="og:description" content="Scrittura e comunicazione, Ethical AI, parità di genere e linguaggi inclusivi.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://ilariamariadondi.github.io/imd-portfolio/foto.jpeg">
+<link rel="canonical" href="https://ilariamariadondi.github.io/imd-portfolio/">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
   --cream:#F3ECE2;
   --cream2:#E9E0D3;
+  --white:#FFFDF9;
   --black:#191919;
   --rust:#B34F28;
   --gray:#6B6460;
   --line:#D0C2B0;
   --pad:52px;
-  --sec-top:20px;
-  --sec-bot:24px;
+  --sec-top:28px;
+  --sec-bot:34px;
 }
-body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--black);font-size:19px;line-height:1.65;max-width:1100px;margin:0 auto;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--cream);
+  color:var(--black);
+  font-size:18px;
+  line-height:1.65;
+  max-width:1100px;
+  margin:0 auto;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
 a{color:inherit;text-decoration:none;}
+a:focus-visible,button:focus-visible{outline:2px solid var(--rust);outline-offset:3px;}
 
 /* HEADER */
-header{padding:24px var(--pad) 20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1.5px solid var(--line);gap:20px;}
-.logo-wrap{display:flex;flex-direction:column;gap:6px;}
+header{
+  padding:24px var(--pad) 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1.5px solid var(--line);
+  gap:24px;
+}
+.logo-wrap{display:flex;flex-direction:column;gap:7px;min-width:0;}
 .logo-img{width:210px;height:auto;display:block;mix-blend-mode:multiply;}
-.logo-tagline{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);}
-.hdr-email{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;white-space:nowrap;}
+.logo-tagline{
+  font-size:10px;
+  letter-spacing:1.65px;
+  text-transform:uppercase;
+  color:var(--gray);
+  line-height:1.3;
+  white-space:nowrap;
+}
+.hdr-email{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:18px;
+  white-space:nowrap;
+  color:var(--black);
+}
+.hdr-email:hover{color:var(--rust);}
+
+/* BUTTONS */
+.btn-row{display:flex;gap:12px;align-items:center;justify-content:flex-start;flex-wrap:wrap;}
+.btn-row.center{justify-content:center;}
+.btn-primary,.btn-secondary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:10px 17px;
+  border:1.4px solid var(--rust);
+  font-size:13px;
+  line-height:1.2;
+  letter-spacing:.75px;
+  text-transform:uppercase;
+  transition:background .2s ease,color .2s ease,border-color .2s ease;
+}
+.btn-primary{background:var(--rust);color:#fff;}
+.btn-primary:hover{background:#943f20;border-color:#943f20;}
+.btn-secondary{color:var(--rust);background:transparent;}
+.btn-secondary:hover{background:rgba(179,79,40,.08);}
+.text-link{
+  display:inline-flex;
+  align-items:center;
+  width:max-content;
+  margin-top:13px;
+  font-size:13px;
+  line-height:1.2;
+  letter-spacing:.8px;
+  text-transform:uppercase;
+  color:var(--rust);
+  border-bottom:1px solid var(--rust);
+  padding-bottom:2px;
+}
+.text-link:hover{color:#943f20;border-color:#943f20;}
 
 /* HERO */
-.hero{padding:28px var(--pad) 24px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 260px;gap:52px;align-items:start;}
-.hero-h1{font-family:'Cormorant Garamond',serif;font-size:22px;line-height:1.2;font-weight:400;margin-bottom:18px;}
+.hero{
+  padding:32px var(--pad) 32px;
+  border-bottom:1px solid var(--line);
+  display:grid;
+  grid-template-columns:1fr 260px;
+  gap:52px;
+  align-items:start;
+}
+.hero-h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:30px;
+  line-height:1.16;
+  font-weight:400;
+  margin-bottom:18px;
+  max-width:720px;
+}
 .hero-h1 em{font-style:italic;color:var(--rust);}
-.hero-bio{font-size:19px;line-height:1.75;color:#3A3530;}
-.hero-photo{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top center;display:block;background:var(--cream2);}
+.hero-bio{
+  font-size:18px;
+  line-height:1.72;
+  color:#3A3530;
+  max-width:690px;
+}
+.hero-actions{margin-top:24px;}
+.hero-photo{
+  width:100%;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  object-position:top center;
+  display:block;
+  background:var(--cream2);
+}
 
-/* SEZIONE TITOLI */
-.sec-title{font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--rust);}
-.sec-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:28px;gap:16px;flex-wrap:wrap;}
+/* SECTION TITLES */
+.sec-title,.nl-tag{
+  font-family:'Inter',sans-serif;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--rust);
+}
+.sec-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;}
 
 /* SERVICES */
 .services{padding:var(--sec-top) var(--pad) var(--sec-bot);border-bottom:1px solid var(--line);}
 .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;}
-.col-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;padding-bottom:12px;border-bottom:1.5px solid var(--black);margin-bottom:2px;}
+.col-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:21px;
+  line-height:1.22;
+  font-weight:500;
+  padding-bottom:12px;
+  border-bottom:1.5px solid var(--black);
+  margin-bottom:2px;
+}
 .svc-list{list-style:none;}
-.svc-list li{font-size:18px;padding:10px 0 10px 26px;border-bottom:1px solid var(--line);position:relative;line-height:1.5;}
+.svc-list li{
+  font-size:17px;
+  padding:10px 0 10px 26px;
+  border-bottom:1px solid var(--line);
+  position:relative;
+  line-height:1.45;
+}
 .svc-list li::before{content:'→';position:absolute;left:0;top:10px;color:var(--rust);font-size:15px;}
+.services-cta{margin-top:28px;}
+
+/* FOR WHOM */
+.for-whom{
+  padding:26px var(--pad);
+  border-bottom:1px solid var(--line);
+  background:rgba(255,255,255,.28);
+}
+.for-whom p{
+  font-family:'Cormorant Garamond',serif;
+  font-size:25px;
+  line-height:1.35;
+  color:#2d2925;
+  max-width:920px;
+}
+.for-whom em{font-style:italic;color:var(--rust);}
 
 /* WHY ME */
 .why{padding:var(--sec-top) var(--pad) var(--sec-bot);border-bottom:1px solid var(--line);}
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px;}
-.why-card{background:#fff;padding:20px 18px 20px;border-top:2.5px solid var(--rust);display:flex;flex-direction:column;}
-.why-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--rust);font-weight:500;margin-bottom:6px;}
-.why-name{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:500;margin-bottom:6px;line-height:1.2;}
-.why-desc{font-size:17px;color:var(--gray);line-height:1.5;min-height:2.8em;}
-.why-icon{height:34px;margin-top:14px;display:flex;align-items:center;}
-.why-icon img{height:100%;width:auto;max-width:110px;object-fit:contain;object-position:left center;display:block;}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px;align-items:stretch;}
+.why-card{
+  background:var(--white);
+  padding:20px 18px 18px;
+  border-top:2.5px solid var(--rust);
+  display:flex;
+  flex-direction:column;
+  min-height:220px;
+}
+a.why-card:hover .why-action{color:#943f20;border-color:#943f20;}
+.why-label{
+  font-size:10px;
+  line-height:1.35;
+  letter-spacing:1.85px;
+  text-transform:uppercase;
+  color:var(--rust);
+  font-weight:600;
+  margin-bottom:8px;
+  min-height:28px;
+}
+.why-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:23px;
+  font-weight:500;
+  margin-bottom:8px;
+  line-height:1.1;
+}
+.why-desc{
+  font-size:15.5px;
+  color:var(--gray);
+  line-height:1.45;
+  min-height:66px;
+}
+.why-icon{
+  height:34px;
+  margin-top:12px;
+  display:flex;
+  align-items:center;
+}
+.why-icon img{height:100%;width:auto;max-width:112px;object-fit:contain;object-position:left center;display:block;}
+.why-action{
+  margin-top:auto;
+  padding-top:14px;
+  font-size:12px;
+  letter-spacing:.75px;
+  text-transform:uppercase;
+  color:var(--rust);
+  width:max-content;
+  border-bottom:1px solid var(--rust);
+  line-height:1.2;
+}
+.why-card.no-link .why-action{border-bottom:0;color:var(--gray);}
 
 /* NEWSLETTER */
 .newsletter{padding:var(--sec-top) var(--pad) var(--sec-bot);border-bottom:1px solid var(--line);}
-.nl-tag{font-size:12px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--rust);margin-bottom:24px;}
+.nl-tag{margin-bottom:24px;}
 .nl-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-.nl-card{background:#fff;padding:22px;display:grid;grid-template-columns:64px 1fr;gap:18px;}
-.nl-cover-wrap{width:64px;height:64px;flex-shrink:0;overflow:hidden;}
+.nl-card{background:var(--white);padding:22px;display:grid;grid-template-columns:72px 1fr;gap:18px;align-items:start;}
+.nl-cover-wrap{width:72px;height:72px;flex-shrink:0;overflow:hidden;}
 .nl-cover-wrap.rdu{background:#E8A88A;}
 .nl-cover-wrap.ano{background:#C8A028;}
 .nl-cover-wrap img{width:100%;height:100%;object-fit:cover;display:block;}
-.nl-name{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:500;margin-bottom:3px;}
-.nl-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--rust);margin-bottom:10px;}
-.nl-desc{font-size:17px;line-height:1.65;color:var(--gray);}
+.nl-name{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:500;margin-bottom:3px;line-height:1.12;}
+.nl-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--rust);margin-bottom:10px;line-height:1.2;}
+.nl-desc{font-size:16px;line-height:1.58;color:var(--gray);}
+.nl-cta-box{
+  margin-top:26px;
+  padding:24px;
+  background:rgba(255,255,255,.44);
+  border:1px solid var(--line);
+  text-align:center;
+}
+.nl-cta-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:27px;
+  font-weight:500;
+  line-height:1.18;
+  margin-bottom:16px;
+}
 
 /* BOOKS */
-.books{padding:var(--sec-top) var(--pad) var(--sec-bot);background:var(--cream2);}
-.books-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:24px;}
-.book{display:flex;gap:18px;align-items:flex-start;}
-.bcover-wrap{width:150px;height:215px;flex-shrink:0;overflow:hidden;}
+.books{padding:var(--sec-top) var(--pad) var(--sec-bot);background:var(--cream2);border-bottom:1px solid var(--line);}
+.books-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:22px;}
+.book{display:flex;gap:18px;align-items:flex-start;min-width:0;}
+.bcover-wrap{width:128px;height:184px;flex-shrink:0;overflow:hidden;}
 .bcover-wrap.b1{background:#7A6555;}
 .bcover-wrap.b2{background:#3E3E5E;}
 .bcover-wrap.b3{background:#B83D22;}
 .bcover-wrap img{width:100%;height:100%;object-fit:cover;display:block;}
-.btitle{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;margin-bottom:6px;}
-.bsub{font-size:16px;color:var(--gray);line-height:1.45;margin-bottom:6px;}
-.bpub{font-size:14px;color:var(--rust);text-transform:uppercase;letter-spacing:.8px;}
-.bnote{font-size:13px;color:var(--gray);margin-top:5px;font-style:italic;}
+.btitle{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;margin-bottom:6px;line-height:1.05;}
+.bsub{font-size:16px;color:var(--gray);line-height:1.42;margin-bottom:7px;}
+.bpub{font-size:13px;color:var(--rust);text-transform:uppercase;letter-spacing:.8px;line-height:1.3;}
+.bnote{font-size:13px;color:var(--gray);margin-top:5px;font-style:italic;line-height:1.38;}
+.book .text-link{margin-top:11px;}
+
+/* FINAL CTA */
+.final-cta{
+  padding:34px var(--pad);
+  border-bottom:1px solid var(--line);
+  background:var(--cream);
+  text-align:center;
+}
+.final-cta h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:32px;
+  line-height:1.14;
+  font-weight:500;
+  max-width:760px;
+  margin:0 auto 12px;
+}
+.final-cta p{
+  font-size:17px;
+  line-height:1.6;
+  color:#3A3530;
+  max-width:740px;
+  margin:0 auto 22px;
+}
 
 /* FOOTER */
-footer{padding:24px var(--pad);border-top:1.5px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;}
-.ft-label{font-size:12px;color:var(--gray);margin-bottom:4px;}
-.ft-email{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:var(--rust);}
-.ft-links{display:flex;align-items:center;gap:20px;}
+footer{padding:24px var(--pad);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;}
+.ft-label{font-size:13px;color:var(--gray);margin-bottom:4px;}
+.ft-email{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--rust);}
+.ft-email:hover{color:#943f20;}
+.ft-links{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
 .ft-link{font-size:13px;letter-spacing:.5px;text-transform:uppercase;color:var(--gray);display:flex;align-items:center;gap:6px;}
 .ft-link:hover{color:var(--rust);}
 
-/* TABLET ≤860px */
-@media(max-width:860px){
+/* TABLET ≤900px */
+@media(max-width:900px){
   :root{--pad:36px;}
+  .hero{grid-template-columns:1fr 240px;gap:36px;}
+  .hero-h1{font-size:28px;}
   .why-grid{grid-template-columns:1fr 1fr;}
+  .why-card{min-height:210px;}
   .svc-grid{gap:32px;}
-  .bcover-wrap{width:90px;height:130px;}
+  .books-grid{grid-template-columns:1fr;gap:24px;}
+  .book{max-width:720px;}
+  .bcover-wrap{width:110px;height:158px;}
 }
 
-/* MOBILE ≤600px */
-@media(max-width:600px){
-  :root{--pad:22px;--sec-top:26px;--sec-bot:28px;}
+/* MOBILE ≤640px */
+@media(max-width:640px){
+  :root{--pad:22px;--sec-top:28px;--sec-bot:30px;}
+  body{font-size:16px;line-height:1.6;}
   header{flex-direction:column;align-items:flex-start;gap:10px;}
   .logo-img{width:180px;}
-  .hdr-email{font-size:15px;}
-  .hero{grid-template-columns:1fr;gap:24px;padding-top:28px;padding-bottom:28px;}
-  .hero-photo{aspect-ratio:4/3;max-height:260px;}
-  .hero-h1{font-size:24px;}
-  .hero-bio{font-size:16px;}
-  .svc-grid{grid-template-columns:1fr;gap:28px;}
-  .col-title{font-size:18px;}
-  .svc-list li{font-size:15px;}
-  .why-grid{grid-template-columns:1fr 1fr;gap:12px;}
-  .why-name{font-size:17px;}
-  .why-desc{font-size:14px;}
+  .logo-tagline{font-size:9.5px;letter-spacing:1.15px;white-space:normal;max-width:320px;}
+  .hdr-email{font-size:17px;}
+  .hero{grid-template-columns:1fr;gap:24px;padding-top:30px;padding-bottom:30px;}
+  .hero-photo{aspect-ratio:4/3;max-height:270px;}
+  .hero-h1{font-size:27px;line-height:1.16;}
+  .hero-bio{font-size:16.5px;line-height:1.65;}
+  .btn-primary,.btn-secondary{width:100%;min-height:44px;font-size:12.5px;}
+  .svc-grid{grid-template-columns:1fr;gap:30px;}
+  .col-title{font-size:21px;}
+  .svc-list li{font-size:16px;line-height:1.45;}
+  .for-whom p{font-size:23px;line-height:1.32;}
+  .why-grid{grid-template-columns:1fr;gap:14px;}
+  .why-card{min-height:auto;padding:18px;}
+  .why-label{min-height:0;font-size:10px;}
+  .why-name{font-size:23px;}
+  .why-desc{font-size:15.5px;min-height:0;}
+  .why-icon{height:30px;}
   .nl-grid{grid-template-columns:1fr;gap:14px;}
-  .nl-desc{font-size:15px;}
-  .books-grid{grid-template-columns:1fr;gap:22px;}
-  .bcover-wrap{width:90px;height:130px;}
+  .nl-card{grid-template-columns:68px 1fr;padding:20px;}
+  .nl-cover-wrap{width:68px;height:68px;}
+  .nl-desc{font-size:15.5px;}
+  .nl-cta-title{font-size:25px;}
+  .books-grid{grid-template-columns:1fr;gap:24px;}
+  .bcover-wrap{width:92px;height:132px;}
+  .btitle{font-size:23px;}
+  .bsub{font-size:15.5px;}
+  .final-cta h2{font-size:29px;}
+  .final-cta p{font-size:16.5px;}
   footer{flex-direction:column;align-items:flex-start;gap:16px;}
 }
 
 /* VERY SMALL ≤380px */
 @media(max-width:380px){
   :root{--pad:16px;}
-  .hero-h1{font-size:22px;}
-  .why-grid{grid-template-columns:1fr;}
+  .hero-h1{font-size:25px;}
   .nl-card{grid-template-columns:1fr;}
-  .nl-cover-wrap{width:100%;height:60px;}
+  .nl-cover-wrap{width:100%;height:72px;}
+  .book{gap:14px;}
+  .bcover-wrap{width:82px;height:118px;}
+  .ft-links{gap:14px;}
+}
+
+/* PRINT / PDF */
+@media print{
+  body{max-width:none;background:var(--cream);}
+  a{break-inside:avoid;}
+  section,header,footer{break-inside:avoid;}
+  .why-card,.nl-card,.book{break-inside:avoid;}
 }
 </style>
 </head>
@@ -139,22 +391,26 @@ footer{padding:24px var(--pad);border-top:1.5px solid var(--line);display:flex;j
 <header>
   <div class="logo-wrap">
     <img src="logo.png?v=2" alt="IMD - Ilaria Maria Dondi" class="logo-img">
-    <div class="logo-tagline">Scrittura e comunicazione - Ethical AI - Parità di genere</div>
+    <div class="logo-tagline">Scrittura e comunicazione - Ethical AI - Parità di genere - Linguaggi inclusivi</div>
   </div>
-  <div class="hdr-email">ilariamariadondi@gmail.com</div>
+  <a href="mailto:ilariamariadondi@gmail.com" class="hdr-email">ilariamariadondi@gmail.com</a>
 </header>
 
 <!-- HERO -->
 <section class="hero">
   <div>
-    <h1 class="hero-h1">Lavoro sulle <em>parole</em> che raccontano le persone - e sui sistemi che oggi le producono.</h1>
+    <h1 class="hero-h1">Lavoro sulle <em>parole</em> che raccontano le persone - e sull’AI che oggi cambia il modo in cui comunichiamo.</h1>
     <p class="hero-bio">Giornalista, autrice e consulente. Da oltre dieci anni mi occupo di linguaggi, narrazioni, diritti e parità di genere per testate, aziende, fondazioni e istituzioni. Oggi affianco a questo lavoro la formazione e la consulenza sull'integrazione dell'AI nei processi di comunicazione, con un'attenzione costante agli impatti sociali e reputazionali.</p>
+    <div class="btn-row hero-actions">
+      <a href="mailto:ilariamariadondi@gmail.com" class="btn-primary">Scrivimi</a>
+      <a href="#servizi" class="btn-secondary">Scopri cosa faccio</a>
+    </div>
   </div>
   <img src="foto.jpeg" alt="Ilaria Maria Dondi" class="hero-photo">
 </section>
 
 <!-- SERVICES -->
-<section class="services">
+<section class="services" id="servizi">
   <div class="sec-row">
     <h2 class="sec-title">Cosa posso fare per te</h2>
   </div>
@@ -170,16 +426,24 @@ footer{padding:24px var(--pad);border-top:1.5px solid var(--line);display:flex;j
       </ul>
     </div>
     <div>
-      <h3 class="col-title">AI responsabile per la comunicazione</h3>
+      <h3 class="col-title">Comunicazione AI responsabile</h3>
       <ul class="svc-list">
-        <li>Progettazione e delivery di percorsi formativi sull'uso consapevole dell'AI</li>
-        <li>Consulenza per l'integrazione dell'AI nei processi di comunicazione</li>
-        <li>Implementazione di agenti AI personalizzati per redazioni, editoria, comunicazione, HR ed education</li>
-        <li>Integrazione di strumenti AI con attenzione agli impatti sociali e reputazionali</li>
-        <li>Sviluppo di linee guida e policy interne sull'uso dell'AI: do/don't, dati sensibili, citazioni, trasparenza</li>
+        <li>Consulenza per integrare l'AI nei processi editoriali, comunicativi e organizzativi</li>
+        <li>Formazione sull'uso consapevole dell'AI per team, redazioni, aziende e istituzioni</li>
+        <li>Implementazione di agenti AI personalizzati per contenuti, comunicazione, HR ed education</li>
+        <li>Audit di contenuti e workflow con attenzione a bias, stereotipi, dati sensibili e rischi reputazionali</li>
+        <li>Linee guida e policy interne sull'uso dell'AI: trasparenza, citazioni, privacy, do/don't</li>
       </ul>
     </div>
   </div>
+  <div class="btn-row center services-cta">
+    <a href="mailto:ilariamariadondi@gmail.com" class="btn-primary">Costruiamo il percorso giusto</a>
+  </div>
+</section>
+
+<!-- FOR WHOM -->
+<section class="for-whom">
+  <p>Lavoro con aziende, redazioni, fondazioni, istituzioni, scuole e professioniste/i che vogliono comunicare meglio, usare l'AI con criterio e ridurre rischi <em>linguistici, discriminatori e reputazionali</em>.</p>
 </section>
 
 <!-- WHY ME -->
@@ -188,56 +452,68 @@ footer{padding:24px var(--pad);border-top:1.5px solid var(--line);display:flex;j
     <h2 class="sec-title">Perché lavorare con me</h2>
   </div>
   <div class="why-grid">
-    <div class="why-card">
+    <a class="why-card" href="https://lespresso.it/g/ilaria-maria-dondi?author_name=Ilaria+Maria+Dondi&author_id=5381" target="_blank" rel="noopener">
       <div class="why-label">Collaboro con</div>
       <div class="why-name">L'Espresso</div>
       <div class="why-desc">Inchieste su diritti, parità e politiche pubbliche</div>
-      <div class="why-icon"><img src="logo-espresso.png" alt="L'Espresso"></div>
-    </div>
-    <div class="why-card">
+      <div class="why-icon"><img src="logo-espresso.png" alt="L'Espresso" loading="lazy"></div>
+      <div class="why-action">Leggi gli articoli</div>
+    </a>
+    <a class="why-card" href="https://www.youtube.com/watch?v=Vi53snw3P1k" target="_blank" rel="noopener">
       <div class="why-label">Nel 2025 sono stata</div>
       <div class="why-name">TEDx Speaker</div>
       <div class="why-desc">Diritti riproduttivi e linguaggi inclusivi</div>
-      <div class="why-icon"><img src="logo-tedx.png" alt="TEDx"></div>
-    </div>
-    <div class="why-card">
+      <div class="why-icon"><img src="logo-tedx.png" alt="TEDx" loading="lazy"></div>
+      <div class="why-action">Guarda il talk</div>
+    </a>
+    <a class="why-card" href="https://www.linkedin.com/in/ilariamariadondi/" target="_blank" rel="noopener">
       <div class="why-label">Dal 2022 sono</div>
       <div class="why-name">LinkedIn Top Voice</div>
       <div class="why-desc">Per la divulgazione sulla parità di genere</div>
-      <div class="why-icon"><img src="logo-topvoice.png" alt="LinkedIn Top Voice"></div>
-    </div>
-    <div class="why-card">
+      <div class="why-icon"><img src="logo-topvoice.png" alt="LinkedIn Top Voice" loading="lazy"></div>
+      <div class="why-action">Vai al profilo</div>
+    </a>
+    <div class="why-card no-link">
       <div class="why-label">Ho diretto per +10 anni</div>
       <div class="why-name">Roba da Donne</div>
-      <div class="why-desc">Femminile oltre gli stereotipi con community 1M+</div>
-      <div class="why-icon"><img src="logo-robadadonne.png" alt="Roba da Donne"></div>
+      <div class="why-desc">Ex direttrice responsabile. Community oltre 1M</div>
+      <div class="why-icon"><img src="logo-robadadonne.png" alt="Roba da Donne" loading="lazy"></div>
+      <div class="why-action">Esperienza editoriale</div>
     </div>
   </div>
 </section>
 
 <!-- NEWSLETTER -->
-<section class="newsletter">
+<section class="newsletter" id="newsletter">
   <div class="nl-tag">Le mie newsletter</div>
   <div class="nl-grid">
     <div class="nl-card">
       <div class="nl-cover-wrap rdu">
-        <img src="cover-rdu.jpg" alt="Rompere le Uova">
+        <img src="cover-rdu.jpg" alt="Rompere le Uova" loading="lazy">
       </div>
       <div>
         <div class="nl-name">Rompere le Uova</div>
         <div class="nl-sub">Scelte e diritti riproduttivi</div>
         <div class="nl-desc">La newsletter che parla di scelte e diritti riproduttivi - che sono anche diritti a non riprodursi, o a farlo in tempi e modi non previsti dall'ordine costituito - senza squadre e senza opporre chi ha figli a chi non ne ha.</div>
+        <a href="https://rompereleuova.substack.com/" class="text-link" target="_blank" rel="noopener">Leggi e iscriviti</a>
       </div>
     </div>
     <div class="nl-card">
       <div class="nl-cover-wrap ano">
-        <img src="cover-anomalia.jpg" alt="AnomalIA">
+        <img src="cover-anomalia.jpg" alt="AnomalIA" loading="lazy">
       </div>
       <div>
         <div class="nl-name">AnomalIA. Umani in tempi artificiali</div>
         <div class="nl-sub">Intelligenza artificiale, lavoro e parità</div>
         <div class="nl-desc">La newsletter che legge l'intelligenza artificiale dal punto di vista delle persone, con uno sguardo critico su genere, lavoro e disuguaglianze.</div>
+        <a href="https://anomaliaumana.substack.com/" class="text-link" target="_blank" rel="noopener">Leggi e iscriviti</a>
       </div>
+    </div>
+  </div>
+  <div class="nl-cta-box">
+    <div class="nl-cta-title">Vuoi creare una newsletter con una voce riconoscibile?</div>
+    <div class="btn-row center">
+      <a href="mailto:ilariamariadondi@gmail.com" class="btn-primary">Parliamone</a>
     </div>
   </div>
 </section>
@@ -250,27 +526,29 @@ footer{padding:24px var(--pad);border-top:1.5px solid var(--line);display:flex;j
   <div class="books-grid">
     <div class="book">
       <div class="bcover-wrap b1">
-        <img src="libere.jpg" alt="Libere">
+        <img src="libere.jpg" alt="Libere" loading="lazy">
       </div>
       <div>
         <div class="btitle">Libere</div>
         <div class="bsub">Di scegliere se e come avere figli</div>
         <div class="bpub">Einaudi, 2024</div>
+        <a href="https://www.einaudi.it/catalogo-libri/problemi-contemporanei/libere-ilaria-maria-dondi-9788806256920/" class="text-link" target="_blank" rel="noopener">Scheda libro</a>
       </div>
     </div>
     <div class="book">
       <div class="bcover-wrap b2">
-        <img src="reprocidio.jpg" alt="Reprocidio">
+        <img src="reprocidio.jpg" alt="Reprocidio" loading="lazy">
       </div>
       <div>
         <div class="btitle">Reprocidio</div>
         <div class="bsub">Come distruggere un popolo colpendo madri e figli</div>
         <div class="bpub">UTET, 2026</div>
+        <a href="https://www.utetlibri.it/libri/reprocidio/" class="text-link" target="_blank" rel="noopener">Scheda libro</a>
       </div>
     </div>
     <div class="book">
       <div class="bcover-wrap b3">
-        <img src="inrivolta.jpg" alt="In Rivolta">
+        <img src="inrivolta.jpg" alt="In Rivolta" loading="lazy">
       </div>
       <div>
         <div class="btitle">In Rivolta</div>
@@ -282,19 +560,28 @@ footer{padding:24px var(--pad);border-top:1.5px solid var(--line);display:flex;j
   </div>
 </section>
 
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2>Vuoi rendere più chiara, responsabile e riconoscibile la tua comunicazione?</h2>
+  <p>Scrivimi per percorsi formativi, consulenze, audit editoriali o progetti che tengano insieme linguaggio, AI, genere e impatto sociale.</p>
+  <div class="btn-row center">
+    <a href="mailto:ilariamariadondi@gmail.com" class="btn-primary">Costruiamo il percorso giusto</a>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div>
-    <div class="ft-label">Per progetti, consulenze, formazione:</div>
-    <div class="ft-email">ilariamariadondi@gmail.com</div>
+    <div class="ft-label">Per formazione, consulenze e progetti editoriali:</div>
+    <a href="mailto:ilariamariadondi@gmail.com" class="ft-email">ilariamariadondi@gmail.com</a>
   </div>
   <div class="ft-links">
-    <a href="https://www.linkedin.com/in/ilariamariadondi/" class="ft-link">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+    <a href="https://www.linkedin.com/in/ilariamariadondi/" class="ft-link" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
       LinkedIn
     </a>
-    <a href="https://www.instagram.com/_didon/" class="ft-link">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+    <a href="https://www.instagram.com/_didon/" class="ft-link" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
       Instagram
     </a>
   </div>
