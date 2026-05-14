@@ -16,79 +16,83 @@
   --line:#D0C2B0;
   --pad:56px;
 }
-body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--black);font-size:13px;line-height:1.65;max-width:1100px;margin:0 auto;}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--black);font-size:15px;line-height:1.65;max-width:1100px;margin:0 auto;}
 a{color:inherit;text-decoration:none;}
 
 /* HEADER */
 header{padding:26px var(--pad) 22px;display:flex;justify-content:space-between;align-items:center;border-bottom:1.5px solid var(--line);gap:20px;}
-.logo-wrap{display:flex;flex-direction:column;gap:6px;}
-.logo-img{height:72px;width:auto;display:block;}
-.logo-tagline{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);}
-.hdr-email{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;white-space:nowrap;}
+.logo-wrap{display:flex;flex-direction:column;gap:8px;}
+.logo-img{height:72px;width:auto;max-width:200px;object-fit:contain;object-position:left center;display:block;}
+.logo-tagline{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);}
+.hdr-email{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;white-space:nowrap;}
 
 /* HERO */
 .hero{padding:52px var(--pad) 48px;border-bottom:1px solid var(--line);}
-.hero-h1{font-family:'Cormorant Garamond',serif;font-size:44px;line-height:1.1;font-weight:400;margin-bottom:24px;}
+.hero-h1{font-family:'Cormorant Garamond',serif;font-size:48px;line-height:1.1;font-weight:400;margin-bottom:26px;}
 .hero-h1 em{font-style:italic;color:var(--rust);}
-.hero-bio{font-size:13.5px;line-height:1.78;color:#3A3530;max-width:640px;}
+.hero-bio{font-size:16px;line-height:1.78;color:#3A3530;max-width:660px;}
+
+/* sezione label — stile "LE MIE NEWSLETTER" ma più grande, usato per tutti i titoli sezione */
+.sec-title{
+  font-family:'Inter',sans-serif;
+  font-size:12px;font-weight:500;
+  letter-spacing:3px;text-transform:uppercase;
+  color:var(--rust);
+}
 
 /* SERVICES */
 .services{padding:44px var(--pad) 52px;border-bottom:1px solid var(--line);}
 .sec-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:36px;gap:16px;flex-wrap:wrap;}
-.sec-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;}
-.sec-tag{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--rust);}
 .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
-.col-title{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;padding-bottom:12px;border-bottom:1.5px solid var(--black);margin-bottom:2px;}
+.col-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;padding-bottom:12px;border-bottom:1.5px solid var(--black);margin-bottom:2px;}
 .svc-list{list-style:none;}
-.svc-list li{font-size:12.5px;padding:10px 0 10px 20px;border-bottom:1px solid var(--line);position:relative;line-height:1.5;}
-.svc-list li::before{content:'→';position:absolute;left:0;top:10px;color:var(--rust);font-size:11px;}
+.svc-list li{font-size:14px;padding:11px 0 11px 22px;border-bottom:1px solid var(--line);position:relative;line-height:1.5;}
+.svc-list li::before{content:'→';position:absolute;left:0;top:11px;color:var(--rust);font-size:12px;}
 
 /* WHY ME */
 .why{padding:44px var(--pad) 52px;border-bottom:1px solid var(--line);}
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px;}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px;}
 .why-card{background:#fff;padding:20px 18px 22px;border-top:2.5px solid var(--rust);}
-.why-icon{height:22px;margin-bottom:12px;display:flex;align-items:center;}
-.why-name{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;margin-bottom:4px;line-height:1.2;}
-.why-since{font-size:10px;color:var(--rust);letter-spacing:.3px;margin-bottom:7px;}
-.why-desc{font-size:11.5px;color:var(--gray);line-height:1.5;}
+.why-icon{height:40px;margin-bottom:14px;display:flex;align-items:center;}
+.why-icon img{height:100%;width:auto;max-width:120px;object-fit:contain;object-position:left center;display:block;}
+.why-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;margin-bottom:4px;line-height:1.2;}
+.why-since{font-size:11px;color:var(--rust);letter-spacing:.3px;margin-bottom:7px;}
+.why-desc{font-size:13px;color:var(--gray);line-height:1.5;}
 
 /* NEWSLETTER */
 .newsletter{padding:40px var(--pad) 50px;border-bottom:1px solid var(--line);}
-.nl-tag{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--rust);margin-bottom:28px;display:flex;align-items:center;gap:14px;}
+.nl-tag{font-size:12px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--rust);margin-bottom:28px;display:flex;align-items:center;gap:14px;}
 .nl-tag::after{content:'';flex:1;height:1px;background:var(--line);}
 .nl-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-.nl-card{background:#fff;padding:22px;display:grid;grid-template-columns:72px 1fr;gap:18px;}
-.nl-cover{width:72px;height:90px;flex-shrink:0;object-fit:cover;display:block;}
-/* fallback colore se l'immagine non carica */
-.nl-cover-wrap{width:72px;height:90px;flex-shrink:0;overflow:hidden;}
+.nl-card{background:#fff;padding:22px;display:grid;grid-template-columns:60px 1fr;gap:18px;}
+.nl-cover-wrap{width:60px;height:60px;flex-shrink:0;overflow:hidden;}
 .nl-cover-wrap.rdu{background:#E8A88A;}
 .nl-cover-wrap.ano{background:#C8A028;}
 .nl-cover-wrap img{width:100%;height:100%;object-fit:cover;display:block;}
-.nl-name{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;margin-bottom:2px;}
-.nl-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:11px;color:var(--rust);margin-bottom:9px;}
-.nl-desc{font-size:12px;line-height:1.65;color:var(--gray);}
+.nl-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;margin-bottom:2px;}
+.nl-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;color:var(--rust);margin-bottom:9px;}
+.nl-desc{font-size:13px;line-height:1.65;color:var(--gray);}
 
 /* BOOKS */
 .books{padding:40px var(--pad) 52px;background:var(--cream2);}
-.books-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:32px;}
-.book{display:flex;gap:14px;align-items:flex-start;}
-/* il wrapper mantiene il colore di fallback se l'immagine manca */
-.bcover-wrap{width:62px;height:90px;flex-shrink:0;overflow:hidden;}
+.books-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:28px;}
+.book{display:flex;gap:16px;align-items:flex-start;}
+.bcover-wrap{width:82px;height:118px;flex-shrink:0;overflow:hidden;}
 .bcover-wrap.b1{background:#7A6555;}
 .bcover-wrap.b2{background:#3E3E5E;}
 .bcover-wrap.b3{background:#B83D22;}
 .bcover-wrap img{width:100%;height:100%;object-fit:cover;display:block;}
-.btitle{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;margin-bottom:4px;}
-.bsub{font-size:11px;color:var(--gray);line-height:1.45;margin-bottom:4px;}
-.bpub{font-size:9.5px;color:var(--rust);text-transform:uppercase;letter-spacing:.8px;}
-.bnote{font-size:10px;color:var(--gray);margin-top:3px;font-style:italic;}
+.btitle{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;margin-bottom:5px;}
+.bsub{font-size:13px;color:var(--gray);line-height:1.45;margin-bottom:5px;}
+.bpub{font-size:11px;color:var(--rust);text-transform:uppercase;letter-spacing:.8px;}
+.bnote{font-size:11px;color:var(--gray);margin-top:4px;font-style:italic;}
 
 /* FOOTER */
 footer{padding:28px var(--pad);border-top:1.5px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;}
-.ft-label{font-size:10px;color:var(--gray);margin-bottom:4px;}
-.ft-email{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--rust);}
+.ft-label{font-size:11px;color:var(--gray);margin-bottom:4px;}
+.ft-email{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--rust);}
 .ft-links{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
-.ft-link{font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--gray);display:flex;align-items:center;gap:5px;}
+.ft-link{font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:var(--gray);display:flex;align-items:center;gap:5px;}
 .ft-link:hover{color:var(--rust);}
 
 /* TABLET ≤860px */
@@ -103,23 +107,24 @@ footer{padding:28px var(--pad);border-top:1.5px solid var(--line);display:flex;j
   :root{--pad:22px;}
   header{flex-direction:column;align-items:flex-start;gap:10px;padding-top:22px;padding-bottom:18px;}
   .logo-img{height:56px;}
-  .hdr-email{font-size:14px;}
+  .hdr-email{font-size:15px;}
   .hero{padding-top:36px;padding-bottom:36px;}
-  .hero-h1{font-size:30px;line-height:1.15;margin-bottom:18px;}
-  .hero-bio{font-size:13px;}
+  .hero-h1{font-size:32px;line-height:1.15;margin-bottom:20px;}
+  .hero-bio{font-size:15px;}
   .services{padding-top:36px;padding-bottom:40px;}
   .sec-row{margin-bottom:24px;}
-  .sec-title{font-size:20px;}
   .svc-grid{grid-template-columns:1fr;gap:32px;}
-  .col-title{font-size:17px;}
+  .col-title{font-size:18px;}
+  .svc-list li{font-size:14px;}
   .why{padding-top:36px;padding-bottom:40px;}
   .why-grid{grid-template-columns:1fr 1fr;gap:12px;margin-top:24px;}
-  .why-name{font-size:15px;}
-  .why-desc{font-size:11px;}
+  .why-name{font-size:16px;}
+  .why-desc{font-size:12px;}
   .newsletter{padding-top:36px;padding-bottom:40px;}
   .nl-grid{grid-template-columns:1fr;gap:14px;}
   .nl-card{padding:18px;gap:14px;}
-  .nl-name{font-size:16px;}
+  .nl-name{font-size:17px;}
+  .nl-desc{font-size:13px;}
   .books{padding-top:36px;padding-bottom:40px;}
   .books-grid{grid-template-columns:1fr;gap:22px;}
   footer{flex-direction:column;align-items:flex-start;gap:18px;padding-top:24px;padding-bottom:28px;}
@@ -129,7 +134,7 @@ footer{padding:28px var(--pad);border-top:1.5px solid var(--line);display:flex;j
 /* VERY SMALL ≤380px */
 @media(max-width:380px){
   :root{--pad:16px;}
-  .hero-h1{font-size:26px;}
+  .hero-h1{font-size:28px;}
   .why-grid{grid-template-columns:1fr;}
   .nl-card{grid-template-columns:1fr;gap:12px;}
   .nl-cover-wrap{width:100%;height:56px;}
@@ -141,7 +146,6 @@ footer{padding:28px var(--pad);border-top:1.5px solid var(--line);display:flex;j
 <!-- HEADER -->
 <header>
   <div class="logo-wrap">
-    <!-- LOGO: sostituisce logo.png con il file vero che carichi su GitHub -->
     <img src="logo.png" alt="IMD - Ilaria Maria Dondi" class="logo-img">
     <div class="logo-tagline">Parità di genere - Linguaggi inclusivi - AI responsabile</div>
   </div>
@@ -158,7 +162,6 @@ footer{padding:28px var(--pad);border-top:1.5px solid var(--line);display:flex;j
 <section class="services">
   <div class="sec-row">
     <h2 class="sec-title">Cosa posso fare per te</h2>
-    <span class="sec-tag">Due ambiti · Uno sguardo</span>
   </div>
   <div class="svc-grid">
     <div>
@@ -172,7 +175,7 @@ footer{padding:28px var(--pad);border-top:1.5px solid var(--line);display:flex;j
       </ul>
     </div>
     <div>
-      <h3 class="col-title">AI responsabile per comunicazione, contenuti e processi editoriali</h3>
+      <h3 class="col-title">AI responsabile per la comunicazione</h3>
       <ul class="svc-list">
         <li>Progettazione e delivery di percorsi formativi sull'uso consapevole dell'AI</li>
         <li>Consulenza per l'integrazione dell'AI nei processi di comunicazione</li>
@@ -192,20 +195,15 @@ footer{padding:28px var(--pad);border-top:1.5px solid var(--line);display:flex;j
   <div class="why-grid">
     <a href="https://espresso.repubblica.it" class="why-card">
       <div class="why-icon">
-        <svg viewBox="0 0 72 16" width="72" height="16" xmlns="http://www.w3.org/2000/svg">
-          <text x="0" y="13" font-family="Georgia,serif" font-size="13" font-weight="700" fill="#191919">L'Espresso</text>
-        </svg>
+        <img src="logo-espresso.png" alt="L'Espresso">
       </div>
       <div class="why-name">Firma L'Espresso</div>
       <div class="why-since">Dal 2018</div>
       <div class="why-desc">Inchieste su diritti, parità e politiche pubbliche</div>
     </a>
-    <a href="" class="why-card"><!-- inserisci link YouTube TEDx -->
+    <a href="" class="why-card">
       <div class="why-icon">
-        <svg viewBox="0 0 52 16" width="52" height="16" xmlns="http://www.w3.org/2000/svg">
-          <text x="0" y="13" font-family="Arial,sans-serif" font-size="13" font-weight="900" fill="#E62B1E">TED</text>
-          <text x="37" y="13" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#191919">x</text>
-        </svg>
+        <img src="logo-tedx.png" alt="TEDx">
       </div>
       <div class="why-name">TEDx Speaker</div>
       <div class="why-since">2025</div>
@@ -213,10 +211,7 @@ footer{padding:28px var(--pad);border-top:1.5px solid var(--line);display:flex;j
     </a>
     <a href="https://linkedin.com/in/ilariamariadondi" class="why-card">
       <div class="why-icon">
-        <svg viewBox="0 0 18 18" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="18" height="18" rx="3" fill="#0A66C2"/>
-          <path d="M4.5 7h2v7h-2zm1-3a1.15 1.15 0 110 2.3A1.15 1.15 0 015.5 4zm3.5 3h1.9v1s.5-1 2.1-1c1.7 0 2.5 1.1 2.5 3.1V14h-2v-3.5c0-1-.4-1.5-1.2-1.5s-1.3.6-1.3 1.6V14H9V7z" fill="white"/>
-        </svg>
+        <img src="logo-topvoice.png" alt="LinkedIn Top Voice">
       </div>
       <div class="why-name">LinkedIn Top Voice</div>
       <div class="why-since">Parità di genere dal 2022</div>
@@ -224,10 +219,7 @@ footer{padding:28px var(--pad);border-top:1.5px solid var(--line);display:flex;j
     </a>
     <div class="why-card">
       <div class="why-icon">
-        <svg viewBox="0 0 20 18" width="20" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="10" cy="9" r="8.5" stroke="#B34F28" stroke-width="1.2"/>
-          <text x="10" y="13" font-family="Georgia,serif" font-size="8" font-weight="700" fill="#B34F28" text-anchor="middle">RdD</text>
-        </svg>
+        <img src="logo-robadadonne.png" alt="Roba da Donne">
       </div>
       <div class="why-name">Roba da Donne</div>
       <div class="why-since">Ex direttrice responsabile</div>
@@ -241,7 +233,6 @@ footer{padding:28px var(--pad);border-top:1.5px solid var(--line);display:flex;j
   <div class="nl-tag">Le mie newsletter</div>
   <div class="nl-grid">
     <div class="nl-card">
-      <!-- cover-rdu.jpg = immagine cover Rompere le Uova -->
       <div class="nl-cover-wrap rdu">
         <img src="cover-rdu.jpg" alt="Rompere le Uova">
       </div>
@@ -252,7 +243,6 @@ footer{padding:28px var(--pad);border-top:1.5px solid var(--line);display:flex;j
       </div>
     </div>
     <div class="nl-card">
-      <!-- cover-anomalia.jpg = immagine cover AnomalIA -->
       <div class="nl-cover-wrap ano">
         <img src="cover-anomalia.jpg" alt="AnomalIA">
       </div>
@@ -272,7 +262,6 @@ footer{padding:28px var(--pad);border-top:1.5px solid var(--line);display:flex;j
   </div>
   <div class="books-grid">
     <div class="book">
-      <!-- libere.jpg = copertina Libere -->
       <div class="bcover-wrap b1">
         <img src="libere.jpg" alt="Libere - Einaudi">
       </div>
@@ -283,7 +272,6 @@ footer{padding:28px var(--pad);border-top:1.5px solid var(--line);display:flex;j
       </div>
     </div>
     <div class="book">
-      <!-- reprocidio.jpg = copertina Reprocidio -->
       <div class="bcover-wrap b2">
         <img src="reprocidio.jpg" alt="Reprocidio - UTET">
       </div>
@@ -294,7 +282,6 @@ footer{padding:28px var(--pad);border-top:1.5px solid var(--line);display:flex;j
       </div>
     </div>
     <div class="book">
-      <!-- inrivolta.jpg = copertina In Rivolta -->
       <div class="bcover-wrap b3">
         <img src="inrivolta.jpg" alt="In Rivolta - Castelvecchi">
       </div>
@@ -319,7 +306,7 @@ footer{padding:28px var(--pad);border-top:1.5px solid var(--line);display:flex;j
       <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
       LinkedIn
     </a>
-    <a href="https://instagram.com" class="ft-link"><!-- inserisci tuo profilo IG -->
+    <a href="" class="ft-link">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
       Instagram
     </a>
