@@ -57,14 +57,15 @@ header{padding:26px var(--pad) 22px;display:flex;justify-content:space-between;a
 .why-icon{height:36px;margin-top:14px;display:flex;align-items:center;}
 .why-icon img{height:100%;width:auto;max-width:110px;object-fit:contain;object-position:left center;display:block;}
 
-.why-card{background:#fff;padding:20px 18px 22px;border-top:2.5px solid var(--rust);}font-weight:500;margin-bottom:4px;line-height:1.2;}
+.why-card{background:#fff;padding:20px 18px 22px;border-top:2.5px solid var(--rust);display:flex;flex-direction:column;}
+.why-desc{font-size:13px;color:var(--gray);line-height:1.5;min-height:2.6em;}font-weight:500;margin-bottom:4px;line-height:1.2;}
 .why-name{font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:.3px;margin-bottom:7px;}
 .why-desc{font-size:13px;color:var(--gray);line-height:1.5;}
 
 /* NEWSLETTER */
 .newsletter{padding:40px var(--pad) 50px;border-bottom:1px solid var(--line);}
 .nl-tag{font-size:12px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--rust);margin-bottom:28px;display:flex;align-items:center;gap:14px;}
-.nl-tag::after{content:'';flex:1;height:1px;background:var(--line);}
+
 .nl-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
 .nl-card{background:#fff;padding:22px;display:grid;grid-template-columns:60px 1fr;gap:18px;}
 .nl-cover-wrap{width:60px;height:60px;flex-shrink:0;overflow:hidden;}
@@ -149,7 +150,7 @@ footer{padding:28px var(--pad);border-top:1.5px solid var(--line);display:flex;j
 <!-- HEADER -->
 <header>
   <div class="logo-wrap">
-    <img src="logo.png" alt="IMD - Ilaria Maria Dondi" class="logo-img">
+    <img src="logo.png?v=2" alt="IMD - Ilaria Maria Dondi" class="logo-img">
     <div class="logo-tagline">Parità di genere - Linguaggi inclusivi - AI responsabile</div>
   </div>
   <div class="hdr-email">ilariamariadondi@gmail.com</div>
@@ -214,13 +215,13 @@ footer{padding:28px var(--pad);border-top:1.5px solid var(--line);display:flex;j
     <div class="why-card">
       <div class="why-label">Dal 2022 sono</div>
       <div class="why-name">LinkedIn Top Voice</div>
-      <div class="why-desc">Per la parità di genere</div>
+      <div class="why-desc">Per la divulgazione sulla parità di genere</div>
       <div class="why-icon"><img src="logo-topvoice.png" alt="LinkedIn Top Voice"></div>
     </div>
     <div class="why-card">
       <div class="why-label">Ho diretto per +10 anni</div>
       <div class="why-name">Roba da Donne</div>
-      <div class="why-desc">Community 1M+ utenti</div>
+      <div class="why-desc">Femminile oltre gli stereotipi con community 1M+</div>
       <div class="why-icon"><img src="logo-robadadonne.png" alt="Roba da Donne"></div>
     </div>
   </div>
