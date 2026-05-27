@@ -137,6 +137,28 @@ header{
   background:var(--cream2);
 }
 
+/* PROMO CONSULENZA */
+.promo-consulenza{
+  padding:28px var(--pad);
+  border-bottom:1px solid var(--line);
+}
+.promo-consulenza-link{
+  display:block;
+  line-height:0;
+  border-radius:18px;
+  overflow:hidden;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.promo-consulenza-link:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 30px rgba(25,25,25,.12);
+}
+.promo-consulenza-img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
 /* SECTION TITLES */
 .sec-title,.nl-tag{
   font-family:'Inter',sans-serif;
@@ -169,7 +191,6 @@ header{
   line-height:1.45;
 }
 .svc-list li::before{content:'→';position:absolute;left:0;top:10px;color:var(--rust);font-size:15px;}
-.services-cta{margin-top:28px;}
 
 /* FOR WHOM */
 .for-whom{
@@ -348,6 +369,8 @@ footer{padding:24px var(--pad);display:flex;justify-content:space-between;align-
   .hero-h1{font-size:27px;line-height:1.16;}
   .hero-bio{font-size:16.5px;line-height:1.65;}
   .btn-primary,.btn-secondary{width:100%;min-height:44px;font-size:12.5px;}
+  .promo-consulenza{padding:22px var(--pad);}
+  .promo-consulenza-link{border-radius:12px;}
   .svc-grid{grid-template-columns:1fr;gap:30px;}
   .col-title{font-size:21px;}
   .svc-list li{font-size:16px;line-height:1.45;}
@@ -417,6 +440,13 @@ footer{padding:24px var(--pad);display:flex;justify-content:space-between;align-
   <img src="foto.jpeg" alt="Ilaria Maria Dondi" class="hero-photo">
 </section>
 
+<!-- PROMO CONSULENZA -->
+<section class="promo-consulenza">
+  <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1n3-7k3DX3vKOgfBX8E9vu8EWGtOWGxZ0Wb_U53SEcXpuvya_N-JSvmAy7qU5UWGDWWwfetlvN" class="promo-consulenza-link" target="_blank" rel="noopener">
+    <img src="promo%20consulenza.jpg" alt="Prenota una consulenza gratuita di 30 minuti sull'uso dell'AI per la comunicazione" class="promo-consulenza-img" loading="lazy">
+  </a>
+</section>
+
 <!-- SERVICES -->
 <section class="services" id="servizi">
   <div class="sec-row">
@@ -443,9 +473,6 @@ footer{padding:24px var(--pad);display:flex;justify-content:space-between;align-
         <li>Linee guida e policy interne sull'uso dell'AI: trasparenza, citazioni, privacy, do/don't</li>
       </ul>
     </div>
-  </div>
-  <div class="btn-row center services-cta">
-    <a href="mailto:ilariamariadondi@gmail.com" class="btn-primary">Costruiamo il percorso giusto</a>
   </div>
 </section>
 
